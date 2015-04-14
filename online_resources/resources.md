@@ -1,7 +1,7 @@
 # Online Resources
-These are list of general online resouces
+This is a list of general online resources
 
-- Online language compiler (Java, Ruby, Puthon, Objective C, etc). For testing code snippets quickly  
+- Online language compiler (Java, Ruby, Python, Objective C, etc). For test code snippets quickly.  
 http://www.tutorialspoint.com/codingground.htm 
 
  
