@@ -7,6 +7,6 @@ This is a list of useful articles
 - Making Your ActionBar Not Boring  
  http://flavienlaurent.com/blog/2013/11/20/making-your-action-bar-not-boring
 
-- Material design :: App Structure (basics)
-  http://www.google.com/design/spec/patterns/app-structure.html
+- Material design :: App Structure (basics)  
+http://www.google.com/design/spec/patterns/app-structure.html
  
