@@ -1,11 +1,11 @@
 Realm
 =====
 
-It is know that Android Realm version is lower that iOS version. Because of this, a lot of issues are present at the moment.
+It is well knows that Android Realm version is lower than iOS version. A lot of issues are present at the moment.
 
 Issue: **Android Low Level heap can be consumed entirely by Realm**:
 Realm is an implementation based on a C and C++ as a JNI, plus a Java implementation to use this API. The C and C++ imlementation uses the native heap and the Java implementation uses the Java Heap.
-The problem recently solved is the 100% consuming of native heap when many Realm IO operations are executed per second described by the following error.
+Recently, We have solved the 100% consuming of native heap when many Realm IO operations are being executed per second described by the below error.
 
 ```
  Build: samsung/degaswifixx/degaswifi:4.4.2/KOT49H/T230XXU0ANJ4:user/release-keys
@@ -31,6 +31,6 @@ The problem recently solved is the 100% consuming of native heap when many Realm
  broadcastEvent : com.inzpiral.neofrogmi SYSTEM_TOMBSTONE
 ```
 
-This issue was happened on ExecutionView when a lot of IO operations are carried out using saveQuestions() method. **To solve this**, I've refactored some code that allow the code be more efficient and faster to be executed. This enhancement allows ExecutionView carry out less Realm IO operations and therefore, a better way to use the Native Heap.
+This issue happened on a View when a lot of IO operations are carried out using saveQuestions() (Internal Method). **To solve this**, I've refactored some code that allow to be much more efficient and faster to be executed. This enhancement allows ExecutionView carry out less Realm IO operations and therefore, a better way to use the Native Heap.
 
-**In conclusion: ** to prevent the previous error, you must reduce the IO Realm operations per second and prefer use beginTransaction() - commitTransaction() with a lot of IO operations, instead use a beginTransaction() - commitTransaction() per operation.
+**Overall: ** to prevent the previous error, you must reduce the IO Realm operations per second and prefer use beginTransaction() - commitTransaction() with a lot of IO operations, instead use a beginTransaction() - commitTransaction() per operation.
