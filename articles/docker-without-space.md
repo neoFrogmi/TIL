@@ -14,6 +14,7 @@ You could try these commands which release data unused.
 ```
 docker rm $(docker ps -q -f 'status=exited')
 docker rmi $(docker images -q -f "dangling=true")
+docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
 ```
 
 if error is present, the solution is resize the default image.
