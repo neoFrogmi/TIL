@@ -18,6 +18,7 @@ Delete the orphaned volumes in Docker, you can use the built-in docker volume co
 docker rmi $(docker images -q -f "dangling=true")
 ```
 
+Remove stopped containers.
 ```
 docker rm $(docker ps -q -f 'status=exited')
 ```
@@ -34,9 +35,8 @@ if error is present, the solution is resize the default image.
 rm ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/Docker.qcow2
 ```
 
-```
 Restart docker
-```
+
 
 ```
 /Applications/Docker.app/Contents/MacOS/qemu-img resize \ 
