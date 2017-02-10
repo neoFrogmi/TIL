@@ -2,7 +2,7 @@
 
 If you got this error running docker you need resize you image.
 
-Docker on Mac OSX create a file 
+Docker on Mac OSX create a file located on 
 ```
 ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/Docker.qcow2
 ``` 
