@@ -11,9 +11,20 @@ where contains everything (at least I think so)... this image by default is crea
 How to fix it?
 You could try these commands which release data unused. 
 
+## Cleanup
+Delete the orphaned volumes in Docker, you can use the built-in docker volume command. The built-in command also deletes any directory in `/var/lib/docker/volumes` that is not a volume so make sure you didn't put anything in there you want to save.
+
+```
+docker rmi $(docker images -q -f "dangling=true")
+```
+
 ```
 docker rm $(docker ps -q -f 'status=exited')
-docker rmi $(docker images -q -f "dangling=true")
+```
+
+Also consider removing all the unused Images.
+
+```
 docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
 ```
 
