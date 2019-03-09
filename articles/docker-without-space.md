@@ -23,6 +23,12 @@ Remove stopped containers.
 docker rm $(docker ps -q -f 'status=exited')
 ```
 
+Docker provides a single command that will clean up any resources — images, containers, volumes, and networks — that are dangling (not associated with a container):
+
+```
+docker system prune
+```
+
 Also consider removing all the unused Images.
 
 ```
